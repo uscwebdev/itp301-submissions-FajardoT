@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tony Fajardo|Student Page</title>
+
+	<link href="index.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	<h1>Tony Fajardo</h1>
+	<a href=mailto:“tfajardo@usc.edu”>tfajardo@usc.edu</a>
+
+	<div class="press">
+		<button id="background">Favorite Color</button>
+	</div>
+
+	<div class="work">
+		<div class="list">
+			<h3>Assignments</h3>
+			<a href="assignment_01/index.html" target="_blank">Assignment 01</a>
+		</div>
+
+		<div class="list">
+			<h3>Lab</h3>
+			<a href="index.html" target="_blank">Lab 1</a>
+		</div>
+	</div>
+
+	<script>
+		document.querySelector('#background').onclick = function(){
+			document.querySelector('body').style.backgroundColor = 'darkgoldenrod'
+		}
+	</script>
+
+
+</body>	
+
+</html>

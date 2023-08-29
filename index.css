@@ -1,0 +1,14 @@
+body{
+	text-align: center;
+}
+
+.work{
+	display: grid;
+	width: 50%;
+	margin: auto;
+	grid-template-columns: 1fr 1fr;
+}
+
+.press{
+	padding: 10px;
+}

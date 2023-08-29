@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Gallery</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	
+	<h1>My Favorite Hobbies</h1>
+
+	<div class="gallery">
+		
+		<div class="container">
+			<div class="image" id="one">
+				<img src="img/movie.jpg" alt="movie theatre">
+			</div>
+
+			<div class="image" id="two">
+				<img src="img/book.jpg" alt="reading books">
+			</div>
+
+			<div class="image" id="three">
+				<img src="img/camera.jpg" alt="photography">
+			</div>
+
+			<div class="image" id="four">
+				<img src="img/music.jpg" alt="concert">
+			</div>
+
+			<div class="image" id="five">
+				<img src="img/gym.jpg" alt="weightlifting gym">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="main">
+		<div class="box">
+			<img id="large" src="img/movie.jpg" alt="movie theatre">
+		</div>
+	</div>
+
+	<script>
+		document.querySelector('#one').onclick = function(){
+			document.querySelector('#large').src = 'img/movie.jpg';
+			document.querySelector('#large').alt = 'movie theatre';
+		}
+
+		document.querySelector('#two').onclick = function(){
+			document.querySelector('#large').src = 'img/book.jpg';
+			document.querySelector('#large').alt = 'reading books';
+		}
+
+		document.querySelector('#three').onclick = function(){
+			document.querySelector('#large').src = 'img/camera.jpg';
+			document.querySelector('#large').alt = 'photography';
+		}
+
+		document.querySelector('#four').onclick = function(){
+			document.querySelector('#large').src = 'img/music.jpg';
+			document.querySelector('#large').alt = 'concert';
+		}
+
+		document.querySelector('#five').onclick = function(){
+			document.querySelector('#large').src = 'img/gym.jpg';
+			document.querySelector('#large').alt = 'weightlifting gym';
+		}		
+	</script>
+
+</body>
+
+</html>
