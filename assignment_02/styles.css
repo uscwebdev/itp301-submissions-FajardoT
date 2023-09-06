@@ -1,0 +1,38 @@
+.header{
+	text-align: center;
+	background-color: goldenrod;
+	padding: 10px;
+}
+
+.container{
+	padding: 5px;
+	margin: 0 auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	max-width: 65%;
+	text-align: center;
+}
+
+.range{
+	margin: 0 auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	max-width: 65%;
+	text-align: center;
+}
+
+.container img{
+	border: 1px solid black;
+}
+
+.gallery .price{
+	text-align: center;
+}
+
+.footer{
+	text-align: center;
+	background-color: goldenrod;
+	padding: 10px;
+}

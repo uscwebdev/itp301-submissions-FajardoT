@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+	
+	<div class="header">
+		
+		<h1>My Cart</h1>
+
+	</div>
+
+	<div class="gallery">
+
+		<div class="container">
+			
+			<div class="skate">
+				<img src="img/skate.jpg" alt="skateboard">
+			</div>
+
+			<div class="scoot">
+				<img src="img/scooter.jpg" alt="scooter">
+			</div>
+
+			<div class="cycle">
+				<img src="img/cycle.jpg" alt="bicycle">
+			</div>
+		</div>
+
+		<div class="range">
+			
+			<div class="caption">
+				<p>Skateboard</p>
+				<p>$10</p>
+			</div>
+
+			<div class="caption">
+				<p>Scooter</p>
+				<p>$45</p>
+			</div>
+
+			<div class="caption">
+				<p>Bicycle</p>
+				<p>$75</p>
+			</div>
+
+		</div>
+
+		<div class="price">
+			<p>Total Cost: $<span id="cost">0</span>
+		</div>
+
+		<div class="footer">
+			<p>Tony Fajardo</p>
+		</div>		
+
+	</div>
+
+<!-- 	Workflow
+
+	1. User clicks on an image (.onclick event).
+	2. Saves the current total price in a variable "final"
+	3. Convert "final" to an integer using parseInt()
+	4. Increase "final" based on image clicked.
+		a. The prices are $10, $45, $75
+	5. Display new total cost -->
+
+	<script>
+
+
+		document.querySelector('.skate').onclick = function(){
+
+	// 2. Saves the current total price in a variable "final"
+
+			var final = document.querySelector('#cost').innerHTML;
+	
+	// 3. Convert "final" to an integer using parseInt()
+
+			var final = parseInt(final);
+
+	// 4. Increase "final" based on image clicked.
+
+			final +=10;
+
+	// 5. Display new total cost	
+
+			document.querySelector('#cost').innerHTML = final;
+
+		}
+
+		document.querySelector('.scoot').onclick = function(){
+	// 2. Saves the current total price in a variable "final"
+
+			var final = document.querySelector('#cost').innerHTML;
+	
+	// 3. Convert "final" to an integer using parseInt()
+
+			var final = parseInt(final);
+
+	// 4. Increase "final" based on image clicked.
+
+			final +=45;
+
+	// 5. Display new total cost	
+
+			document.querySelector('#cost').innerHTML = final;
+		}
+
+		document.querySelector('.cycle').onclick = function(){
+	// 2. Saves the current total price in a variable "final"
+
+			var final = document.querySelector('#cost').innerHTML;
+	
+	// 3. Convert "final" to an integer using parseInt()
+
+			var final = parseInt(final);
+
+	// 4. Increase "final" based on image clicked.
+
+			final +=75;
+
+	// 5. Display new total cost	
+
+			document.querySelector('#cost').innerHTML = final;
+		}
+
+	</script>
+
+</body>
+
+</html>
