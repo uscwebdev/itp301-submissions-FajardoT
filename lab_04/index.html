@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Gallery</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	
+	<h1>My Favorite Hobbies</h1>
+
+	<div class="gallery">
+		
+		<div class="container">
+			<div class="image" id="one">
+				<img class="pic" src="img/movie.jpg" alt="Movie Theatre">
+			</div>
+
+			<div class="image" id="two">
+				<img class="pic" src="img/book.jpg" alt="Reading Books">
+			</div>
+
+			<div class="image" id="three">
+				<img class="pic" src="img/camera.jpg" alt="Photography">
+			</div>
+
+			<div class="image" id="four">
+				<img class="pic" src="img/music.jpg" alt="Concert">
+			</div>
+
+			<div class="image" id="five">
+				<img class="pic" src="img/gym.jpg" alt="Weightlifting Gym">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="main">
+		<div class="box">
+			<img id="large" src="img/movie.jpg" alt="Movie Theatre">
+			<p class="caption">Movie Theatre</p>
+		</div>
+	</div>
+
+	<script>
+
+		var thumbs = document.querySelectorAll(".pic");
+
+		var changeCaption = function(mainImg, newAlt, newCaption){
+			document.querySelector('#large').src = mainImg;
+			document.querySelector('#large').alt = newAlt;
+			document.querySelector('.caption').innerHTML = newCaption;
+
+		}
+
+		for (var i = 0; i < thumbs.length; i++){
+			thumbs[i].onclick = function(){
+				console.log(this);
+				var newAlt = this.alt;
+				var mainImg = this.src;
+				changeCaption(mainImg, newAlt, newAlt);
+			}
+
+		}
+
+
+
+		// document.querySelector('#one').onclick = function(){
+		// 	document.querySelector('#large').src = 'img/movie.jpg';
+		// 	document.querySelector('#large').alt = 'movie theatre';
+		// }
+
+		// document.querySelector('#two').onclick = function(){
+		// 	document.querySelector('#large').src = 'img/book.jpg';
+		// 	document.querySelector('#large').alt = 'reading books';
+		// }
+
+		// document.querySelector('#three').onclick = function(){
+		// 	document.querySelector('#large').src = 'img/camera.jpg';
+		// 	document.querySelector('#large').alt = 'photography';
+		// }
+
+		// document.querySelector('#four').onclick = function(){
+		// 	document.querySelector('#large').src = 'img/music.jpg';
+		// 	document.querySelector('#large').alt = 'concert';
+		// }
+
+		// document.querySelector('#five').onclick = function(){
+		// 	document.querySelector('#large').src = 'img/gym.jpg';
+		// 	document.querySelector('#large').alt = 'weightlifting gym';
+		// }	
+
+
+	</script>
+
+</body>
+
+</html>
