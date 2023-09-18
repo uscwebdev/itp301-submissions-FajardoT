@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+	
+<head>
+	
+	<title>Liar's Dice</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<h1>Liar's Dice</h1>
+
+	<!-- guess -->
+
+	<div class="guess">
+		<p>Enter your guess below: </p>
+		<input type="text" id="dice-guess">
+		<button id="submit">Submit</button>
+
+	</div>
+
+
+	<!-- results -->
+	<div class="results">
+		<strong>Results: </strong>
+		<span class="answer"></span>
+
+	</div>
+
+	<!-- dice roll -->
+	<div class="row">
+
+		<div class="dice">
+			<img class= "die" src="dice_images/1.png" alt="1">
+			<img class= "die" src="dice_images/1.png" alt="1">
+			<img class= "die" src="dice_images/1.png" alt="1">
+			<img class= "die" src="dice_images/1.png" alt="1">
+			<img class= "die" src="dice_images/1.png" alt="1">
+
+		</div>
+
+	</div>
+
+	<script>
+		
+
+		document.querySelector('#submit').onclick = function(){
+			var guess = document.querySelector('#dice-guess').value;
+			console.log(guess);
+
+			var correct = 0;
+
+			var numbers = [];
+
+
+			for (var i = 0; i < 5; i++){
+				var run = Math.floor( Math.random() * 6 + 1 );
+				console.log(run);
+				numbers.push(run);
+			}
+
+
+			console.log(numbers);
+
+			var dice = document.querySelectorAll(".die");
+
+			console.log(dice);
+
+			function updateDie(roll, theory){
+				dice[roll].src = 'dice_images/' + img + '.png';
+				dice[roll].alt = img;
+				if (dice[roll].alt == theory){
+					correct++;
+				}		
+			}
+
+			for (var i = 0; i < 5; i++){
+				var img = numbers[i];
+				updateDie(i,guess);
+				console.log(img);
+				console.log(dice[i].alt);
+
+			}
+
+			if (correct >= 1){
+				document.querySelector('.answer').innerHTML = "You guessed correctly!";
+				document.querySelector('.answer').style.color = 'green';
+			} else{
+				document.querySelector('.answer').innerHTML = "You guessed incorrectly!";
+				document.querySelector('.answer').style.color = 'red';
+			}
+
+		}
+
+
+
+	</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,12 @@
+body{
+	background-color: black;
+	color: white;
+}
+
+.results{
+	padding: 10px;
+}
+
+img{
+	border-radius: 30%;
+}
