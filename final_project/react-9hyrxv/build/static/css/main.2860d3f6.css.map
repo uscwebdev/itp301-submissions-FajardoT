@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.2860d3f6.css","mappings":"AAAA,IACE,eACF,CAEA,KACE,wBAA+B,CAC/B,iBACF","sources":["index.css"],"sourcesContent":["img {\r\n  max-width: 256px;\r\n}\r\n\r\nbody {\r\n  background-color: darkgoldenrod;\r\n  text-align: center;\r\n}\r\n"],"names":[],"sourceRoot":""}
